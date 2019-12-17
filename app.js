@@ -103,8 +103,8 @@ app.use('/graphql', graphqlHttp({
 
 mongoose.connect(URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
 	.then(() => {
-		app.listen(4300, console.log("server running 4300"));
+		app.listen(4300, console.log("server is running on 4300"));
 	}).catch(err => {
-		console.log(err);
+		console.log(' msg', err);
 	})
 
