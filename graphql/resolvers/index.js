@@ -154,8 +154,8 @@ module.exports = {
                 _id: booking.event.id,
                 creator: user.bind(this, booking.creator)
             };
-            console.log('booking = ', booking);
-            console.log('event = ', event);
+            // console.log('booking = ', booking);
+            // console.log('event = ', event);
             await Booking.deleteOne({ _id: args.bookingId });
             return event;
         } catch (err) {
