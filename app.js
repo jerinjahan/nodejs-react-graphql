@@ -28,10 +28,12 @@ app.use('/graphql', graphqlHttp({
 	graphiql: true
 }));
 
-mongoose.connect(URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
+
+mongoose
+	.connect(URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
 	.then(() => {
 		app.listen(8000, console.log("server is running on 8000"));
-	}).catch(err => {
-		console.log(' msg', err);
 	})
-
+	.catch(err => {
+		console.log(err);
+	});
