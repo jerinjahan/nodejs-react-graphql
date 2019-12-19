@@ -5,8 +5,7 @@
 	"main": "app.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "npm install && node index.js",
-		"heroku-postbuild": "cd frontend && npm install && npm start"
+		"start": "npm install && node app.js"
 	},
 	"author": "Jerin Jahan",
 	"license": "ISC",
