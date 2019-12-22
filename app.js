@@ -11,6 +11,7 @@ const isAuth = require('./middleware/is-auth'); // Custom middleware for authori
 
 const app = express();
 const URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@node-graphql-hg7hv.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
+const mongodb_URI = `mongodb+srv://testUser:mwIOUpRekyX0gjLv@node-graphql-hg7hv.mongodb.net/event-react-dev?retryWrites=true&w=majority`;
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
@@ -30,16 +31,16 @@ app.use('/graphql', graphqlHttp({
 }));
 
 
-app.listen(PORT, console.log("server is running on ", PORT));
-app.get('/', function (req, res) {
-	res.json("Hello world");
-});
+// app.listen(PORT, console.log("server is running on ", PORT));
+// app.get('/', function (req, res) {
+// 	res.json("Hello world");
+// });
 
-// mongoose
-// 	.connect(URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
-// 	.then(() => {
-// 		app.listen(PORT, console.log("server is running on ", PORT));
-// 	})
-// 	.catch(err => {
-// 		console.log(err);
-// 	});
+mongoose
+	.connect(mongodb_URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
+	.then(() => {
+		app.listen(PORT, console.log("server is running on ", PORT));
+	})
+	.catch(err => {
+		console.log(err);
+	});

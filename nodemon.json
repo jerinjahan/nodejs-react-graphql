@@ -2,6 +2,7 @@
     "env": {
         "MONGO_USER": "testUser",
         "MONGO_PASSWORD": "mwIOUpRekyX0gjLv",
-        "MONGO_DB": "event-react-dev"
+        "MONGO_DB": "event-react-dev",
+        "MONGODB_URI": "mongodb+srv://testUser:mwIOUpRekyX0gjLv@node-graphql-hg7hv.mongodb.net/event-react-dev?retryWrites=true&w=majority"
     }
 }
