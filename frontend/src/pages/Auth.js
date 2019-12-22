@@ -104,23 +104,6 @@ class AuthPage extends Component {
 					<div className="card-body">
 						<form className="form-horizontal m-t-20" onSubmit={this.submitHandler}>
 
-
-							{/* <div className="form-control">
-						<label htmlFor="email">E-Mail</label>
-						<input type="email" id="email" ref={this.emailEl} />
-					</div>
-					<div className="form-control">
-						<label htmlFor="password">Password</label>
-						<input type="password" id="password" ref={this.passwordEl} />
-					</div>
-					<div className="form-actions">
-						<button type="submit">Submit</button>
-						<button type="button" onClick={this.switchModeHandler}>
-							Switch to {this.state.isLogin ? 'Signup' : 'Login'}
-						</button>
-					</div> */}
-
-
 							<div className="form-group">
 								<div className="col-12">
 									<input className="form-control input-lg" type="text" required="" placeholder="Username" id="email" ref={this.emailEl} />
@@ -156,13 +139,6 @@ class AuthPage extends Component {
 									<a href="javascript:0;" onClick={this.switchModeHandler} >Switch to {this.state.isLogin ? 'Signup' : 'Login'}</a>
 								</div>
 							</div>
-
-							{/* <div className="form-actions">
-								<button type="button" onClick={this.switchModeHandler}>
-									Switch to {this.state.isLogin ? 'Signup' : 'Login'}
-								</button>
-							</div> */}
-
 						</form>
 					</div>
 

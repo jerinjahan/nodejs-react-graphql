@@ -37,7 +37,10 @@ class App extends Component {
 							logout: this.logout
 						}}
 					>
-						<MainNavigation />
+						{this.state.token}{
+							<MainNavigation />
+						}
+
 						<main className="main-content">
 							<Switch>
 								{this.state.token && <Redirect from="/" to="/events" exact />}
