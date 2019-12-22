@@ -38,7 +38,8 @@ class BookingsPage extends Component {
         `
     };
 
-    fetch('http://localhost:8000/graphql', {
+    // fetch('http://localhost:8000/graphql', {
+    fetch('https://nodejs-react-graphql.herokuapp.com/graphql', {
       method: 'POST',
       body: JSON.stringify(requestBody),
       headers: {
@@ -78,7 +79,8 @@ class BookingsPage extends Component {
       }
     };
 
-    fetch('http://localhost:8000/graphql', {
+    // fetch('http://localhost:8000/graphql', {
+    fetch('https://nodejs-react-graphql.herokuapp.com/graphql', {
       method: 'POST',
       body: JSON.stringify(requestBody),
       headers: {
@@ -130,8 +132,8 @@ class BookingsPage extends Component {
                 onDelete={this.deleteBookingHandler}
               />
             ) : (
-              <BookingsChart bookings={this.state.bookings} />
-            )}
+                <BookingsChart bookings={this.state.bookings} />
+              )}
           </div>
         </React.Fragment>
       );
