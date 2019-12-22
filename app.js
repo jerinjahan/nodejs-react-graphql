@@ -36,7 +36,7 @@ app.use('/graphql', graphqlHttp({
 // });
 
 mongoose
-	.connect(`mongodb+srv://testUser:mwIOUpRekyX0gjLv@node-graphql-hg7hv.mongodb.net/event-react-dev?retryWrites=true&w=majority`, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
+	.connect(`mongodb+srv://testUser:mwIOUpRekyX0gjLv@node-graphql-hg7hv.mongodb.net/event-react-dev?retryWrites=true&w=majority`, { useUnifiedTopology: true, useNewUrlParser: true })
 	.then(() => {
 		app.listen(PORT, console.log("server is running on ", PORT));
 	})
