@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const graphqlHttp = require("express-graphql");
 const mongoose = require('mongoose');
+const PORT = process.env.PORT || 8000;
 
 const graphQLSchema = require('./graphql/schema/index');
 const graphQLResolvers = require('./graphql/resolvers/index');
@@ -32,7 +33,7 @@ app.use('/graphql', graphqlHttp({
 mongoose
 	.connect(URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
 	.then(() => {
-		app.listen(8000, console.log("server is running on 8000"));
+		app.listen(PORT, console.log("server is running on ", PORT));
 	})
 	.catch(err => {
 		console.log(err);
