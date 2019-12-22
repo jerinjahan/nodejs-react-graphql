@@ -30,11 +30,16 @@ app.use('/graphql', graphqlHttp({
 }));
 
 
-mongoose
-	.connect(URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
-	.then(() => {
-		app.listen(PORT, console.log("server is running on ", PORT));
-	})
-	.catch(err => {
-		console.log(err);
-	});
+app.listen(PORT, console.log("server is running on ", PORT));
+app.get('/', function (req, res) {
+	res.json("Hello world");
+});
+
+// mongoose
+// 	.connect(URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
+// 	.then(() => {
+// 		app.listen(PORT, console.log("server is running on ", PORT));
+// 	})
+// 	.catch(err => {
+// 		console.log(err);
+// 	});
