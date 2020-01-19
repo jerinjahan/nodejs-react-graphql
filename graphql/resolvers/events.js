@@ -10,7 +10,7 @@ module.exports = {
                 return transformEvent(event);
             });
         } catch (err) {
-            throw err;
+            console.log('got an error', err);
         }
     },
     createEvent: async (args, req) => {
@@ -36,7 +36,7 @@ module.exports = {
             await creator.save();
             return createdEvents;
         } catch (err) {
-            throw err;
+            console.log('got an error', err);
         }
     }
 };

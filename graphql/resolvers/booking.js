@@ -39,7 +39,7 @@ module.exports = {
             await Booking.deleteOne({ _id: args.bookingId });
             return event;
         } catch (err) {
-            throw err;
+            console.log('got an error', err);
         }
     },
 };
