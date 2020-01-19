@@ -14,7 +14,7 @@ module.exports = {
                 return transformBooking(booking);
             });
         } catch (err) {
-            throw err;
+            console.log('got an error', err);
         }
     },
     bookEvent: async (args, req) => {
