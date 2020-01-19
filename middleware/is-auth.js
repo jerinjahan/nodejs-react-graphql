@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
         return next();
     }
     const token = authHeader.split(' ')[1]; // Authorization: Bearer dsfgker
-    if (!token || token === '') {
+    if (!token || token == '') {
         req.isAuth = false;
         return next();
     }
