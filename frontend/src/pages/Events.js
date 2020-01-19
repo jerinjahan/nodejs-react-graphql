@@ -17,7 +17,6 @@ class EventsPage extends Component {
 	isActive = true;
 
 	static contextType = AuthContext;
-
 	constructor(props) {
 		super(props);
 		this.titleElRef = React.createRef();
@@ -25,11 +24,9 @@ class EventsPage extends Component {
 		this.dateElRef = React.createRef();
 		this.descriptionElRef = React.createRef();
 	}
-
 	componentDidMount() {
 		this.fetchEvents();
 	}
-
 	startCreateEventHandler = () => {
 		this.setState({ creating: true });
 	};
@@ -256,13 +253,13 @@ class EventsPage extends Component {
 						</form>
 					</Modal>
 				)}
-				{this.state.selectedEvent && (
+				{this.state.selectedEvent &&  (
 					<Modal
 						title={this.state.selectedEvent.title}
 						canCancel
 						canConfirm
-						onCancel={this.modalCancelHandler}
-						onConfirm={this.bookEventHandler}
+						onCancel ={this.modalCancelHandler}
+						onConfirm ={this.bookEventHandler}
 						confirmText={this.context.token ? 'Book' : 'Confirm'}
 					>
 						<h1>{this.state.selectedEvent.title}</h1>
