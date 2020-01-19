@@ -7,13 +7,13 @@ const bookingsControl = props => {
     <div className="bookings-control">
       <button
         className={props.activeOutputType === 'list' ? 'active' : ''}
-        onClick={props.onChange.bind(this, 'list')}
+        onClick={props.onChange.bind(props, 'list')}
       >
         List
       </button>
       <button
         className={props.activeOutputType === 'chart' ? 'active' : ''}
-        onClick={props.onChange.bind(this, 'chart')}
+        onClick={props.onChange.bind(props, 'chart')}
       >
         Chart
       </button>
