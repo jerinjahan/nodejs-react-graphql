@@ -6,13 +6,11 @@
   top: 20vh;
   left: 5%;
   z-index: 100;
-  height: calc((93% - 6rem) / 2)!important;
-  display: block!important;
 }
 
 .modal__header {
   padding: 1rem;
-  background: #5101d1;
+  background: rgb(4, 125, 196);
   color: white;
 }
 
